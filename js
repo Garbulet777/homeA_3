@@ -19,13 +19,14 @@
         }
    
         function grow(){
-            document.images[String(+name +currentImage)].style.width="320px";
-            document.images[String(+name +currentImage)].style.height="240px";  
+            // currentImage = +name;
+            document.images["pic"+currentImage].style.width="320px";
+            document.images["pic"+currentImage].style.height="240px";  
             show();
             click++;
             if(click%2 == 0){
-                document.images[String(String(+name +currentImage))].style.width="100px";
-                document.images[String(String(+name +currentImage))].style.height="100px";  
+                document.images["pic"+currentImage].style.width="100px";
+                document.images["pic"+currentImage].style.height="100px";  
                 click = 0;
                 pointers.style.display="none";
             }
@@ -39,10 +40,10 @@
         }
 
         function getName(nameG){
-            if(click%2!=0){
+            // if(click%2!=0){
             name = nameG;
-            prevName = name;
-            }
+            // prevName = name;
+           // }
         }
 
         function nextImage() {
@@ -50,15 +51,16 @@
                 alert ("Дождитесь пожалуйста загрузки всех изображений!");
                 return;
             }	
-            document.images[String(+name +currentImage)].style.width="100px";
-            document.images[String(+name +currentImage)].style.height="100px"; 	
+            
+            document.images["pic"+currentImage].style.width="100px";
+            document.images["pic"+currentImage].style.height="100px"; 	
             currentImage++;
 
             if (currentImage == path.length) 
                 currentImage = 0;
-            document.images[String(+name +currentImage)].src = img[currentImage].src;
-            document.images[String(+name +currentImage)].style.width="320px";
-            document.images[String(+name +currentImage)].style.height="240px";  
+            document.images["pic"+currentImage].src = img[currentImage].src;
+            document.images["pic"+currentImage].style.width="320px";
+            document.images["pic"+currentImage].style.height="240px";  
             return false;
         }
         function prevImage(){
@@ -66,16 +68,14 @@
                 alert ("Дождитесь пожалуйста загрузки всех изображений!");
                 return;
             }	
-            document.images[String(+name +currentImage)].style.width="100px";
-            document.images[String(+name +currentImage)].style.height="100px"; 
+            document.images["pic"+currentImage].style.width="100px";
+            document.images["pic"+currentImage].style.height="100px"; 
+            
             currentImage--;
             if(currentImage == -1)
                 currentImage = path.length-1;
-            document.images[String(+name +currentImage)].src = img[currentImage].src;
-            document.images[String(+name +currentImage)].style.width="320px";
-            document.images[String(+name +currentImage)].style.height="240px";  
+            document.images["pic"+currentImage].src = img[currentImage].src;
+            document.images["pic"+currentImage].style.width="320px";
+            document.images["pic"+currentImage].style.height="240px";  
             return false;
         }
-        
-
-
