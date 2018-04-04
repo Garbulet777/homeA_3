@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./img/css/style.css">
+    <title>dz_3.0</title>
+</head>
+<body>
+    <i id="info">Загрузка изображений...</i>
+    <br />
+    <div class="images">
+        <img src="./img/1.jpg" name="'0'" 
+        onmousedown="grow();"
+        onmouseover="getName('0');"
+        >
+        <img src="./img/2.jpg" name="'1'"
+        onmousedown="grow();"
+        onmouseover="getName('1');"
+         >
+        <img src="./img/3.jpg" name="'2'"
+        onmousedown="grow();"
+        onmouseover="getName('2');"
+         >
+        <img src="./img/4.jpg" name="'3'"
+        onmousedown="grow();"
+        onmouseover="getName('3');"
+         >
+        <img src="./img/5.jpg" name="'4'"
+        onmousedown="grow();"
+        onmouseover="getName('4');"
+         >
+        <img src="./img/6.jpg" name="'5'"
+        onmousedown="grow();"
+        onmouseover="getName('5');"
+         >  
+    </div>
+  
+    <br />
+
+    <div id="pointers">
+        <a href="#" onclick="return nextImage()">Следующее изображение</a>
+        <a href="#" onclick="return prevImage()">Предыдущее изображение</a>
+    </div>
+
+    <script src="dz_3.1.js"></script>
+</body>
+</html>
